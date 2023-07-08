@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="noun_Vermont_1012843.png">
+    <title>Accomplishments</title>
+    
+<style>
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+    
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: right;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+</style>
+    
+</head>
+
+    <body>
+        <div class="grid-2">
+        <div class="section-1">
+            <!--<i class="fas fa-code fa-5x white"></i>-->
+            <img src="street.png" alt="DALL-E Image of a Street" height="150" width="150">
+            <h2 id="typewriter">Complete Streets Committee</h2>
+            <p>Montpelier, Vermont, USA</p>
+            <a href="https://www.montpelier-vt.org/907/Complete-Streets-Committee" target="blank"><i class="far fa-building"></i></a>
+            <a href="mailto:montpeliercompletestreets@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+        <div class="section-2">
+          <p>Accomplishments</p>
+          <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="file:///Users/wsp/Documents/GitHub/complete-streets-test/img/glow-ride.png" style="width:50%">
+  <div class="text">Glow Ride (2023) <br> A bright ride at night <br> to  draw attention to the need <br> to watch for pedestrians and <br> cyclists in the winter.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="file:///Users/wsp/Documents/GitHub/complete-streets-test/img/adult-education.png" style="width:50%">
+  <div class="text">Bicycle Basics for Adults (2023) <br> A series of evening educational classes <br> for adults on bicycle safety, riding <br> and maintenance, with a group ride <br> after each class.</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="file:///Users/wsp/Documents/GitHub/complete-streets-test/img/rodeo.png" style="width:50%">
+    <div class="text">Bicycle Rodeo (2023) <br> A bicycle educational event for children, <br> in which basic skills and safety lessons <br> were taught in a fun, hands-on <br> environment.</div>
+  </div>
+              
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>  
+          <p><font size="1">Last Updated July 2023.</font></p>
+    </div>
+    <script src="typewriter.js"></script>
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    </body>
+</html>  
